@@ -31,19 +31,19 @@ class OutpostWorker (val name: String) {
         energy = maxEnergy
         println("$name повышает уровень: $level | Максимальная энергия увеличена до: $maxEnergy" )
     }
+    fun main(){
+        val worker = OutpostWorker("Алексей")
+        println("Энергия: ${worker.energy}")
+        println("Настроение: ${worker.mood}")
+        worker.work()
+        worker.work()
+        worker.work()
+        println("Энергия: ${worker.energy}")
+        println("Настроение: ${worker.mood}")
+        worker.rest()
+        worker.energy = 150
+//    worker.level = 5
+        worker.levelup()
+    }
 }
 
-fun main(){
-    val worker = OutpostWorker("Алексей")
-    println("Энергия: ${worker.energy}")
-    println("Настроение: ${worker.mood}")
-    worker.work()
-    worker.work()
-    worker.work()
-    println("Энергия: ${worker.energy}")
-    println("Настроение: ${worker.mood}")
-    worker.rest()
-    worker.energy = 150
-//    worker.level = 5
-    worker.levelup()
-}

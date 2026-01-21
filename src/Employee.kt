@@ -1,10 +1,35 @@
 class Employee {
-    private var fullName: String = readln()
+    var fullName: String = ""
+        get() = ""
 
-    private var position: String = readln()
+    var position: String = ""
+        get() = ""
 
-    private var salary: Int = readln().toInt()
+    var salary: Int
+        get() = 0
+        set(value){
+            if (value < 0){
+                println("Warning!!!")
+            } else {
+                salary = value
+            }
+        }
 
-    private var yearsOfExperience: Int = readln().toInt()
+    var yearsOfExperience: Int
+        get() = 0
+        set (value){
+            if (value > 50){
+                println("Warning!!!")
+            } else {
+                value
+            }
+        }
+}
 
+fun main(){
+    var worker = Employee()
+    worker.fullName = "Виталий Кузьма Михайлович"
+    worker.position = "Трудовик"
+    worker.salary = -100
+    worker.yearsOfExperience = 60
 }
